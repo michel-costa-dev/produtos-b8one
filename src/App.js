@@ -98,7 +98,7 @@ function App() {
 
             <div className="center">
               {produto.produtoAdicionado ? (
-                <Button onClick={adicionarProduto} selecionado={produto.produtoAdicionado} idButton={produto.produtoId} variant="successAdicionado">
+                <Button onClick={adicionarProduto} selecionado={produto.produtoAdicionado} idButton={produto.produtoId} variant="success">
                   ADICIONADO
                 </Button>
               ) : (
