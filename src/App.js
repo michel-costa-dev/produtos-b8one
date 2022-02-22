@@ -7,6 +7,7 @@ import Moeda from "./Moeda";
 
 function App() {
   const valorDesconto = 200;
+  const qtdParcelas = 10;
   const [produtos, setProdutos] = useState([]);
   const [adicionado, setAdicionado] = useState();
   const [favoritado, setFavoritado] = useState();
@@ -94,7 +95,7 @@ function App() {
             <Card.Title> <Moeda>{produto.produtoValor}</Moeda> </Card.Title>
 
             <Card.Subtitle className="mb-2 text-muted">
-              em até <span className="text-black"> 10x de <Moeda>{produto.produtoValor/10}</Moeda> </span> sem juros
+              em até <span className="text-black"> {qtdParcelas}x de <Moeda>{produto.produtoValor/qtdParcelas}</Moeda> </span> sem juros
             </Card.Subtitle>
 
             <div className="center">
