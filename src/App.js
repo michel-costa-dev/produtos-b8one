@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import Moeda from "./Moeda";
 
 function App() {
+  const valorDesconto = 200;
   const [produtos, setProdutos] = useState([]);
   const [adicionado, setAdicionado] = useState();
   const [favoritado, setFavoritado] = useState();
@@ -88,7 +89,7 @@ function App() {
           <Card.Body>
             <Card.Text>{produto.descricao}</Card.Text>
 
-            <Card.Subtitle className="mb-2 line text-muted"> <Moeda>{produto.produtoValor + 200}</Moeda> </Card.Subtitle>
+            <Card.Subtitle className="mb-2 line text-muted"> <Moeda>{produto.produtoValor + valorDesconto}</Moeda> </Card.Subtitle>
 
             <Card.Title> <Moeda>{produto.produtoValor}</Moeda> </Card.Title>
 
